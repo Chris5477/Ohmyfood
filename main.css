@@ -1,0 +1,230 @@
+.cards, .tuto .steep {
+  border-radius: 20px;
+}
+
+.fas:before {
+  color: black;
+  font-size: 20px;
+}
+
+.logo-shop::before {
+  color: #9356DC;
+  transform-origin: 50% bottom;
+}
+
+.fa-utensils::before, .fa-hands-helping::before {
+  color: white;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-heart {
+  color: grey;
+  font-size: 30px;
+}
+
+.fa-heart:active {
+  animation: fill 1000ms ease-out forwards;
+}
+
+@keyframes fill {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+* {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "shrikhand-regular";
+  src: url("../../police/Shrikhand/Shrikhand-Regular.otf");
+  src: url("../../police/Shrikhand/shrikhand-regular.woff");
+  src: url("../../police/Shrikhand/shrikhand-regular.woff2");
+}
+@font-face {
+  font-family: "roboto-regular";
+  src: url("../../police/Roboto/Roboto-Regular.ttf");
+  src: url("../../police/Roboto/roboto-regular.woff");
+  src: url("../../police/Roboto/roboto-regular.woff2");
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  font-family: "roboto";
+}
+
+h1, h2, h3 {
+  font-family: "shrikhand";
+}
+
+.index-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-footer {
+  background-color: #101010;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 30px 0 30px 0;
+}
+.index-footer h3 {
+  padding: 5px 10px 5px 40px;
+  font-weight: bolder;
+  font-style: italic;
+  color: #FFF;
+}
+.index-footer a {
+  color: #FFF;
+  padding: 5px 10px 5px 40px;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.explore {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.explore .champs {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F2F2;
+}
+.explore .champs .yourPosition {
+  border: none;
+  background-color: #F2F2F2;
+  margin-left: 20px;
+  font-size: 18px;
+}
+.explore .indication {
+  width: 85%;
+  margin: auto;
+}
+.explore .send {
+  background: linear-gradient(150deg, #FF79DA, #9356DC);
+  color: #FFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 60%;
+  height: 50px;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 30px;
+}
+
+.tuto {
+  width: 100%;
+  height: auto;
+}
+.tuto h2 {
+  margin-left: 40px;
+}
+.tuto .steep {
+  width: 85%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  box-shadow: 0px 2px 10px black;
+  background-color: #F2F2F2;
+  font-weight: 700;
+  position: relative;
+}
+.tuto .steep .num {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #FFF;
+  position: absolute;
+  left: -10px;
+}
+.tuto .steep .fas {
+  position: absolute;
+  left: 50px;
+}
+
+.restaurants {
+  width: 100%;
+  height: 30%;
+  padding: 20px 0 20px 0;
+  background-color: #F2F2F2;
+}
+.restaurants h2 {
+  margin-left: 40px;
+}
+
+.cards {
+  width: 90%;
+  height: 20%;
+  margin: 30px auto;
+  box-shadow: 5px 5px 10px black;
+}
+.cards--picture1 {
+  background-image: url("../../ressources/restaurants/jay-wennington.jpg");
+}
+.cards--picture2 {
+  background-image: url("../../ressources/restaurants/stil.jpg");
+}
+.cards--picture3 {
+  background-image: url("../../ressources/restaurants/toa-heftiba.jpg");
+}
+.cards--picture4 {
+  background-image: url("../../ressources/restaurants/louis-hansel.jpg");
+}
+.cards__containerImg {
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-position: center;
+  background-size: cover;
+}
+.cards__describe {
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+.cards__describe h3 {
+  margin: 5px 10px;
+}
+.cards__describe p {
+  margin: 3px 10px;
+}
+.cards__describe span {
+  position: absolute;
+  right: 20px;
+  top: 25%;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+@mixin size-container($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin flexing($axisX: $axePos, $axisY: $axePos){
+    display: flex;
+    justify-content: $axisX;
+    align-items: $axisY;
+}
+
+@mixin padding($top, $right, $bottom, $left){
+    padding: $top $right $bottom $left;
+}
+
+@mixin marging($axisX, $axisY){
+    margin: $axisX  $axisY;
+}
+
+@mixin shadow($x, $y, $propagation, $shadow-color){
+    box-shadow: $x $y $propagation $shadow-color;
+}
+
+@mixin pourlinstantpasdideedenom {
+    @each $key, $value in $restos{
+        &--picture#{$key}{
+            background-image: $value;
+        }
+    }
+}

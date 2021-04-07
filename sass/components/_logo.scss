@@ -1,0 +1,40 @@
+.fas:before{
+   color: black;
+   font-size: 20px;
+}
+
+
+.logo-shop::before{
+    color:$color-primary;
+    transform-origin: 50% bottom;
+}
+
+.fa-utensils::before, .fa-hands-helping::before{
+    color: white;
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    @include flexing;
+}
+
+.fa-heart{
+    color: grey;
+    font-size: 30px;
+}
+
+.fa-heart:active{
+    animation: fill 1000ms ease-out forwards;
+}
+
+@keyframes fill{
+
+    from{
+        transform: scale(0);
+        
+    }
+    
+    to{
+        transform: scale(1); 
+        
+    }
+}
