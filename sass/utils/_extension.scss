@@ -1,3 +1,14 @@
 %border-circle{
     border-radius: 20px;
 }
+
+%btn-submit{
+    background: linear-gradient(150deg, $color-secondary, $color-primary);
+    color: #FFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include size-container(60%, 50px);
+    @include shadow(5px, 5px, 10px, black);
+    border-radius: 30px;
+}

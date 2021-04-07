@@ -1,0 +1,13 @@
+@include adef;
+
+.resto{
+    @include size-container(100%, 300px);
+    background-position: center center;
+    background-size: cover;
+}
+
+.order{
+    @extend %btn-submit;
+}
+
+

@@ -2,6 +2,18 @@
   border-radius: 20px;
 }
 
+.order, .explore .send {
+  background: linear-gradient(150deg, #FF79DA, #9356DC);
+  color: #FFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 60%;
+  height: 50px;
+  box-shadow: 5px 5px 10px black;
+  border-radius: 30px;
+}
+
 .fas:before {
   color: black;
   font-size: 20px;
@@ -77,7 +89,7 @@ h1, h2, h3 {
   align-items: center;
 }
 
-.index-footer {
+.footer {
   background-color: #101010;
   width: 100%;
   height: auto;
@@ -87,13 +99,13 @@ h1, h2, h3 {
   flex-direction: column;
   padding: 30px 0 30px 0;
 }
-.index-footer h3 {
+.footer h3 {
   padding: 5px 10px 5px 40px;
   font-weight: bolder;
   font-style: italic;
   color: #FFF;
 }
-.index-footer a {
+.footer a {
   color: #FFF;
   padding: 5px 10px 5px 40px;
 }
@@ -125,18 +137,6 @@ section {
   width: 85%;
   margin: auto;
 }
-.explore .send {
-  background: linear-gradient(150deg, #FF79DA, #9356DC);
-  color: #FFF;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 60%;
-  height: 50px;
-  box-shadow: 5px 5px 10px black;
-  border-radius: 30px;
-}
-
 .tuto {
   width: 100%;
   height: auto;
@@ -191,16 +191,16 @@ section {
   box-shadow: 5px 5px 10px black;
 }
 .cards--picture1 {
-  background-image: url("../../ressources/restaurants/jay-wennington.jpg");
+  background-image: url(ressources/restaurants/jay-wennington.jpg);
 }
 .cards--picture2 {
-  background-image: url("../../ressources/restaurants/stil.jpg");
+  background-image: url(ressources/restaurants/stil.jpg);
 }
 .cards--picture3 {
-  background-image: url("../../ressources/restaurants/toa-heftiba.jpg");
+  background-image: url(ressources/restaurants/toa-heftiba.jpg);
 }
 .cards--picture4 {
-  background-image: url("../../ressources/restaurants/louis-hansel.jpg");
+  background-image: url(ressources/restaurants/louis-hansel.jpg);
 }
 .cards__containerImg {
   width: 100%;
@@ -225,6 +225,35 @@ section {
   position: absolute;
   right: 20px;
   top: 25%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resto1 {
+  background-image: url(ressources/restaurants/jay-wennington.jpg);
+}
+
+.resto2 {
+  background-image: url(ressources/restaurants/stil.jpg);
+}
+
+.resto3 {
+  background-image: url(ressources/restaurants/toa-heftiba.jpg);
+}
+
+.resto4 {
+  background-image: url(ressources/restaurants/louis-hansel.jpg);
+}
+
+.resto {
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -28,3 +28,12 @@
         }
     }
 }
+
+@mixin adef {
+    @each $key, $value in $restos{
+        .resto#{$key}{
+            background-image: $value;
+        }
+    }
+       
+}
