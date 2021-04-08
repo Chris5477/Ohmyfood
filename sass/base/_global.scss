@@ -5,12 +5,13 @@
 
 
 @font-face {
-    font-family: "shrikhand-regular";
-    src: url("../../police/Shrikhand/Shrikhand-Regular.otf");
-    src: url("../../police/Shrikhand/shrikhand-regular.woff");
-    src: url("../../police/Shrikhand/shrikhand-regular.woff2");
-}
+    font-family: 'shrikhandregular';
+    src: url('shrikhand-regular-webfont.woff2') format('woff2'),
+         url('shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
 @font-face {
     font-family: "roboto-regular";
     src: url("../../police/Roboto/Roboto-Regular.ttf");
@@ -26,6 +27,6 @@ body{
     font-family: "roboto";
 }
 
-h1, h2, h3{
-    font-family: "shrikhand";
+h1{
+    font-family: "Shrikhand Regular ";
 }

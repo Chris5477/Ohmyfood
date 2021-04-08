@@ -17,11 +17,19 @@
     margin: $axisX  $axisY;
 }
 
+@mixin border-round($topleft, $topright, $bottomright, $bottomleft){
+    border-top-left-radius: $topleft;
+    border-top-right-radius: $topright;
+    border-bottom-right-radius: $bottomright;
+    border-bottom-left-radius: $bottomleft;
+}
+    
+
 @mixin shadow($x, $y, $propagation, $shadow-color){
     box-shadow: $x $y $propagation $shadow-color;
 }
 
-@mixin pourlinstantpasdideedenom {
+@mixin bloccards {
     @each $key, $value in $restos{
         &--picture#{$key}{
             background-image: $value;
@@ -29,7 +37,7 @@
     }
 }
 
-@mixin adef {
+@mixin menu-resto{
     @each $key, $value in $restos{
         .resto#{$key}{
             background-image: $value;

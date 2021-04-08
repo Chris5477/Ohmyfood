@@ -1,11 +1,15 @@
 .fas:before{
    color: black;
-   font-size: 20px;
+   font-size: 18px;
 }
 
 .logo-shop::before{
     color:$color-primary;
     transform-origin: 50% bottom;
+}
+
+.logo-mobil::before, .logo-list::before{
+    color: grey;
 }
 
 .fa-utensils::before, .fa-hands-helping::before{
@@ -17,23 +21,31 @@
 }
 
 .fa-heart{
-    color: grey;
     font-size: 30px;
 }
 
-.fa-heart:active{
-    animation: fill 1000ms ease-out forwards;
+.heart::before{
+    font-size: 30px;
+    color: $color-primary;
+}
+
+.heart{
+    opacity: 0;
+    transform-origin:50% bottom;
+}
+
+.heart:active{
+    animation: fill 0.6s ease-out forwards;
 }
 
 @keyframes fill{
-
     from{
         transform: scale(0);
-        
+        opacity: 0;
     }
-    
+
     to{
-        transform: scale(1); 
-        
+        transform: scale(1);
+        opacity: 1;
     }
 }

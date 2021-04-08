@@ -1,13 +1,43 @@
-@include adef;
+@include menu-resto;
 
 .resto{
     @include size-container(100%, 300px);
     background-position: center center;
     background-size: cover;
+    margin: 0;
 }
 
 .order{
     @extend %btn-submit;
 }
 
+.menu{
+    background-color: $bg-component;
+    @include border-round(30px, 30px, 0,0);
+    position: relative;
+    bottom: 60px;
+    &__name{
+        @include flexing(space-around, center);
+        @include size-container(100%, auto);
+    }.form-menu{
+        @include size-container(100%, auto);
+        @include flexing;
+        flex-direction: column;
+    }.form-menu > h2{
+        width: 90%;
+    }
+    &__choix{
+        background-color: #FFF;
+        @include size-container(90%,auto);
+        @include flexing(space-between, center);
+        @extend %border-circle;
+        @include shadow(2px, 2px, 15px, black);
+        @include marging(20px, auto);
+        border: 1px solid grey;
+        font-size: 18px;
+        font-weight: bold;
+    }.intitule{
+        display: inline;
+    }
+}
 

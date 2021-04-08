@@ -3,12 +3,14 @@
 }
 
 %btn-submit{
-    background: linear-gradient(150deg, $color-secondary, $color-primary);
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    @include size-container(60%, 50px);
+    @include shadow(5px, 5px, 10px, black);
+    @include marging(20px,auto);
     color: #FFF;
+    font-weight: bold;
     border: none;
     outline: none;
     cursor: pointer;
-    @include size-container(60%, 50px);
-    @include shadow(5px, 5px, 10px, black);
     border-radius: 30px;
 }

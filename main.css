@@ -1,27 +1,33 @@
-.cards, .tuto .steep {
+.menu__choix, .cards, .tuto .steep {
   border-radius: 20px;
 }
 
 .order, .explore .send {
-  background: linear-gradient(150deg, #FF79DA, #9356DC);
-  color: #FFF;
-  border: none;
-  outline: none;
-  cursor: pointer;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
   width: 60%;
   height: 50px;
   box-shadow: 5px 5px 10px black;
+  margin: 20px auto;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
   border-radius: 30px;
 }
 
 .fas:before {
   color: black;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .logo-shop::before {
   color: #9356DC;
   transform-origin: 50% bottom;
+}
+
+.logo-mobil::before, .logo-list::before {
+  color: grey;
 }
 
 .fa-utensils::before, .fa-hands-helping::before {
@@ -35,32 +41,54 @@
 }
 
 .fa-heart {
-  color: grey;
   font-size: 30px;
 }
 
-.fa-heart:active {
-  animation: fill 1000ms ease-out forwards;
+.heart::before {
+  font-size: 30px;
+  color: #9356DC;
+}
+
+.heart {
+  opacity: 0;
+  transform-origin: 50% bottom;
+}
+
+.heart:active {
+  animation: fill 0.6s ease-out forwards;
 }
 
 @keyframes fill {
   from {
     transform: scale(0);
+    opacity: 0;
   }
   to {
     transform: scale(1);
+    opacity: 1;
   }
 }
+.new-resto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 30px;
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 0px 10px;
+}
+
 * {
   text-decoration: none;
   color: black;
 }
 
 @font-face {
-  font-family: "shrikhand-regular";
-  src: url("../../police/Shrikhand/Shrikhand-Regular.otf");
-  src: url("../../police/Shrikhand/shrikhand-regular.woff");
-  src: url("../../police/Shrikhand/shrikhand-regular.woff2");
+  font-family: "shrikhandregular";
+  src: url("shrikhand-regular-webfont.woff2") format("woff2"), url("shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "roboto-regular";
@@ -77,16 +105,82 @@ body {
   font-family: "roboto";
 }
 
-h1, h2, h3 {
-  font-family: "shrikhand";
+h1 {
+  font-family: "Shrikhand Regular ";
 }
 
+.loading-spinner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform-origin: left 50%;
+  background-color: #9356DC;
+  position: fixed;
+  z-index: 1000;
+  animation: disapear 3s 3.5s ease-in-out forwards;
+}
+.loading-spinner p {
+  font-size: 80px;
+  margin: 0;
+  font-weight: bolder;
+  color: #99E2D0;
+  transform: translateX(1000px);
+  animation: loading 3s ease-in-out 0.2s forwards;
+}
+
+p:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+p:nth-child(3) {
+  animation-delay: 1s;
+}
+
+p:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(1000px);
+  }
+  33% {
+    transform: translateX(0px);
+  }
+  66% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes disapear {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.4);
+  }
+  70% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: rotateY(90deg);
+  }
+}
 .index-header {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+h1 {
+  margin: 10px;
 }
 
 .footer {
@@ -111,38 +205,49 @@ h1, h2, h3 {
 }
 
 section {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-left: 20px;
 }
 
 .explore {
   width: 100%;
   height: auto;
+  padding: 0 0 30px 0;
+  background-color: #F2F2F2;
   text-align: center;
 }
 .explore .champs {
+  background-color: #F2F2F2;
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F2F2F2;
+  box-shadow: 0px 1px 5px #6d6c6c inset;
 }
 .explore .champs .yourPosition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   background-color: #F2F2F2;
-  margin-left: 20px;
   font-size: 18px;
 }
 .explore .indication {
   width: 85%;
   margin: auto;
 }
+.explore .indication p {
+  font-size: 18px;
+  font-weight: 300;
+  color: grey;
+}
 .tuto {
   width: 100%;
   height: auto;
-}
-.tuto h2 {
-  margin-left: 40px;
 }
 .tuto .steep {
   width: 85%;
@@ -171,24 +276,23 @@ section {
 }
 .tuto .steep .fas {
   position: absolute;
-  left: 50px;
+  left: 40px;
 }
 
 .restaurants {
   width: 100%;
-  height: 30%;
+  height: auto;
   padding: 20px 0 20px 0;
   background-color: #F2F2F2;
-}
-.restaurants h2 {
-  margin-left: 40px;
 }
 
 .cards {
   width: 90%;
-  height: 20%;
+  height: 30%;
   margin: 30px auto;
-  box-shadow: 5px 5px 10px black;
+  box-shadow: 2px 2px 10px black;
+  position: relative;
+  z-index: 1;
 }
 .cards--picture1 {
   background-image: url(ressources/restaurants/jay-wennington.jpg);
@@ -202,18 +306,30 @@ section {
 .cards--picture4 {
   background-image: url(ressources/restaurants/louis-hansel.jpg);
 }
+.cards span {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  z-index: 1000;
+}
 .cards__containerImg {
   width: 100%;
-  height: 180px;
+  height: 100px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-position: center;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-position: center center;
   background-size: cover;
 }
 .cards__describe {
   width: 100%;
   height: 60px;
-  position: relative;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #FFF;
 }
 .cards__describe h3 {
   margin: 5px 10px;
@@ -221,10 +337,10 @@ section {
 .cards__describe p {
   margin: 3px 10px;
 }
-.cards__describe span {
+.cards__describe .new-resto {
   position: absolute;
-  right: 20px;
-  top: 25%;
+  right: 15px;
+  top: 15px;
 }
 
 .page-header {
@@ -254,6 +370,51 @@ section {
   height: 300px;
   background-position: center center;
   background-size: cover;
+  margin: 0;
+}
+
+.menu {
+  background-color: #F2F2F2;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  bottom: 60px;
+}
+.menu__name {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.menu .form-menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.menu .form-menu > h2 {
+  width: 90%;
+}
+.menu__choix {
+  background-color: #FFF;
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px 15px black;
+  margin: 20px auto;
+  border: 1px solid grey;
+  font-size: 18px;
+  font-weight: bold;
+}
+.menu .intitule {
+  display: inline;
 }
 
 /*# sourceMappingURL=main.css.map */
