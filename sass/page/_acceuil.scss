@@ -11,19 +11,18 @@ h2{
     @include padding(0,0,30px,0);
     background-color: $bg-component;
     text-align: center;
-    .champs{
-        background-color:$bg-component;
-        @include size-container(100%, 60px);
+    span{
         @include flexing;
-        box-shadow:0px 1px 5px rgb(109, 108, 108) inset;
+        @include size-container(100%,60px);
+        box-shadow: 0px 1px 5px $color-shadow inset;
+        background-color: $bg-component;
+        padding-left: 40px;
         .yourPosition{
-            @include flexing;
-            border: none;
             background-color: $bg-component;
-            font-size: 18px;
+            border: none;
         }
     }
-    .indication{
+     .indication{
         width: 85%;
         margin: auto;
         p{  
@@ -44,7 +43,7 @@ h2{
         @include size-container(85%, 50px);
         @include flexing;
         @include marging(20px, auto);
-        @include shadow(0px, 2px, 10px, black);
+        @include shadow(2px, 2px, 10px);
         @extend %border-circle ;
         background-color:$bg-component;
         font-weight: 700;
@@ -74,7 +73,7 @@ h2{
    .cards{
        @include size-container(90%, 30%);
        @include marging(30px, auto);
-       @include shadow(2px,2px,10px,black);
+       @include shadow(2px,2px,10px);
        @extend %border-circle;
        @include bloccards;
        position: relative;
