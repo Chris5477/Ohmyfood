@@ -1,3 +1,4 @@
 .page-header{
-    @include flexing;
+    @include size-container(80%, auto);
+    @include flexing(space-around,center);
 }

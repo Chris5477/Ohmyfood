@@ -23,12 +23,14 @@
         @include size-container(100%, auto);
         @include flexing;
         flex-direction: column;
+        opacity: 0;
+        animation: writing-menu 1.5s ease-out forwards;
     }.form-menu > h2{
         width: 90%;
         font-weight: 100;
     }
     &__choix{
-        background-color: #FFF;
+        background-color:$white;
         @include size-container(90%,80px);
         @include flexing(flex-start, center);
         @include shadow(2px, 2px, 15px);
@@ -51,7 +53,22 @@
     }p{
         margin:5px 0;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
+.underline{
+    border-bottom: 4px solid $color-third;
+    padding-bottom: 5px;
+}
+
+@keyframes writing-menu {
+    from{
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}

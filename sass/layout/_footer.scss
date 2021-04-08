@@ -4,14 +4,13 @@
     @include flexing(center, flex-start);
     flex-direction: column;
     @include padding(30px, 0, 30px, 0);
-    h3{
+    h1{
     @include padding(5px,10px, 5px, 40px);
-    font-weight: bolder;
-    font-style: italic;
-    color: #FFF;
+    font-size: 18px;
+    color: $white;
     }
     a{
-        color: #FFF;
+        color: $white;
         @include padding(5px,10px, 5px, 40px);
     }
 }
