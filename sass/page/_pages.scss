@@ -23,8 +23,8 @@
         @include size-container(100%, auto);
         @include flexing;
         flex-direction: column;
-        opacity: 0;
         animation: writing-menu 1.5s ease-out forwards;
+        opacity: 0;
     }.form-menu > h2{
         width: 90%;
         font-weight: 100;
@@ -39,6 +39,7 @@
         font-size: 18px;
         font-weight: bold;
         position: relative;
+        overflow: hidden;
         .price{
             position: absolute;
             bottom: 15px;
@@ -72,3 +73,36 @@
         opacity: 1;
     }
 }
+
+.price{
+    @include flexing;
+    transform: translateX(100px);
+    .prix{
+        place-self: flex-end flex-end;
+        padding-right: 20px;
+    }
+}
+
+.coche{
+    @include size-container(80px,80px);
+    @include flexing;
+    transform: translateY(15px);
+    background-color: $color-third;
+}
+
+.checked{
+    @include size-container(40px,40px);
+    @include flexing;
+    background-color: $white;
+    border-radius: 50%;
+    transform: rotateZ(-90deg);
+}
+
+.menu__choix:active > .price{
+    transform: translateX(15px);
+    transition: 1.5s;
+    @if(true){
+        .checked {transform: rotateZ(0deg); transition: 2.5s}
+    }
+}
+

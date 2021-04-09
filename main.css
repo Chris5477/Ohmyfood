@@ -75,6 +75,11 @@ h1 {
   color: #bfbfbf;
 }
 
+.fa-check::before {
+  font-size: 20px;
+  color: #99E2D0;
+}
+
 .heart::before {
   font-size: 30px;
   color: #9356DC;
@@ -121,7 +126,7 @@ h1 {
   background-color: #9356DC;
   position: fixed;
   z-index: 1000;
-  animation: disapear 2s 3.5s ease-in-out forwards;
+  animation: disapear 1.5s 3s ease-in-out forwards;
 }
 .loading-spinner h1 {
   font-size: 80px;
@@ -129,8 +134,8 @@ h1 {
   margin: 0;
   font-weight: bolder;
   color: #99E2D0;
-  transform: translateX(1000px);
-  animation: loading 3s ease-in-out 0.2s forwards;
+  transform: translateX(400px);
+  animation: loading 2s ease-in-out 0.3s forwards;
 }
 
 h1:nth-child(2) {
@@ -147,7 +152,7 @@ h1:nth-child(4) {
 
 @keyframes loading {
   0% {
-    transform: translateX(1000px);
+    transform: translateX(400px);
   }
   33% {
     transform: translateX(0px);
@@ -167,10 +172,10 @@ h1:nth-child(4) {
     clip-path: circle(100%);
   }
   35% {
-    clip-path: circle(40%);
+    clip-path: circle(30%);
   }
   70% {
-    clip-path: circle(0%);
+    clip-path: circle(40%);
   }
   100% {
     clip-path: circle(0%);
@@ -411,8 +416,8 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  opacity: 0;
   animation: writing-menu 1.5s ease-out forwards;
+  opacity: 0;
 }
 .menu .form-menu > h2 {
   width: 90%;
@@ -430,6 +435,7 @@ h2 {
   font-size: 18px;
   font-weight: bold;
   position: relative;
+  overflow: hidden;
 }
 .menu__choix .price {
   position: absolute;
@@ -464,6 +470,46 @@ h2 {
     transform: scaleY(1);
     opacity: 1;
   }
+}
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100px);
+}
+.price .prix {
+  place-self: flex-end flex-end;
+  padding-right: 20px;
+}
+
+.coche {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15px);
+  background-color: #99E2D0;
+}
+
+.checked {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 50%;
+  transform: rotateZ(-90deg);
+}
+
+.menu__choix:active > .price {
+  transform: translateX(15px);
+  transition: 1.5s;
+}
+.menu__choix:active > .price .checked {
+  transform: rotateZ(0deg);
+  transition: 2.5s;
 }
 
 /*# sourceMappingURL=main.css.map */

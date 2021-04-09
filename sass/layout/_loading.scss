@@ -6,15 +6,15 @@
     background-color: $color-primary;
     position: fixed;
     z-index: 1000;
-    animation: disapear 2s 3.5s ease-in-out forwards;
+    animation: disapear 1.5s 3s ease-in-out forwards;
     h1{
         font-size: 80px;
         text-shadow: 5px 10px 15px $color-secondary;
         margin: 0;
         font-weight: bolder;
         color: $color-third;;
-        transform: translateX(1000px);
-        animation: loading 3s ease-in-out 0.2s  forwards ;
+        transform: translateX(400px);
+        animation: loading 2s ease-in-out 0.3s  forwards ;
     }}
 
 
@@ -32,7 +32,7 @@ h1:nth-child(4){
 
 
 @keyframes loading {
-    0%{transform: translateX(1000px)};
+    0%{transform: translateX(400px)};
     33%{transform: translateX(0px);}
     40%{transform:scaleY(2);}
     66%{transform: translateX(150px);}
@@ -42,9 +42,9 @@ h1:nth-child(4){
 @keyframes disapear {
     0%{clip-path: circle(100%);}
 
-    35%{clip-path: circle(40%);}
+    35%{clip-path: circle(30%);}
 
-    70%{clip-path: circle(0%);}
+    70%{clip-path: circle(40%);}
 
     100%{clip-path: circle(0%);}
     

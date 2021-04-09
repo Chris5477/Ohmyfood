@@ -24,6 +24,10 @@
     font-size: 30px;
     color: $color-shadow;
 }
+.fa-check::before{
+    font-size: 20px;
+     color: $color-third;
+}
 
 
 .heart::before{
