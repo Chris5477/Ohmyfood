@@ -1,14 +1,17 @@
 @import"./utils/variables";
 @import"./utils/mixin";
 @import"./utils/extension";
+@import"./base/global";
 @import"./components/logo";
 @import"./components/new-resto";
-@import"./base/global";
 @import"./layout/loading";
 @import"./page/header-acceuil";
+@import"./layout/header-page";
 @import"./layout/footer";
 @import"./page/acceuil";
-@import"./layout/header-page";
 @import"./page/pages";
 // @import"";
 // @import"";
+
+
+

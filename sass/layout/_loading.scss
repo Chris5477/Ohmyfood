@@ -40,15 +40,14 @@ h1:nth-child(4){
 }
 
 @keyframes disapear {
-    0%{
-        transform: scale(1);
-    }
+    0%{clip-path: circle(100%);}
 
-    50%{transform: scale(0.95);}
+    35%{clip-path: circle(40%);}
 
-    100%{
-        transform:rotateY(-90deg);
-    }
+    70%{clip-path: circle(0%);}
+
+    100%{clip-path: circle(0%);}
     
 }
+
 

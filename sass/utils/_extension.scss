@@ -8,10 +8,12 @@
     @include shadow(5px, 5px, 10px, black);
     @include marging(20px,auto);
     color: #FFF;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 30px;
 }
+
+

@@ -9,12 +9,41 @@
   box-shadow: 5px 5px 10px black;
   margin: 20px auto;
   color: #FFF;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 30px;
+}
+
+* {
+  text-decoration: none;
+  color: black;
+}
+
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("police/Shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("police/Shrikhand/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("police/Roboto/roboto-regular.woff2") format("woff2"), url("police/Roboto/roboto-regular.woff") format("woff");
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  font-family: "roboto";
+}
+
+h1 {
+  font-family: "shrikhandregular";
+  margin: 20px 0;
 }
 
 .fas:before {
@@ -81,35 +110,6 @@
   padding: 0px 10px;
 }
 
-* {
-  text-decoration: none;
-  color: black;
-}
-
-@font-face {
-  font-family: "shrikhandregular";
-  src: url("../../police/Shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("../../police/Shrikhand/shrikhand-regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "roboto";
-  src: url("../../police/Roboto/roboto-regular.woff2") format("woff2"), url("../../police/Roboto/roboto-regular.woff") format("woff");
-}
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100vh;
-  font-family: "roboto";
-}
-
-h1 {
-  font-family: "shrikhandregular";
-  margin: 20px 0;
-}
-
 .loading-spinner {
   width: 100%;
   height: 100vh;
@@ -164,13 +164,16 @@ h1:nth-child(4) {
 }
 @keyframes disapear {
   0% {
-    transform: scale(1);
+    clip-path: circle(100%);
   }
-  50% {
-    transform: scale(0.95);
+  35% {
+    clip-path: circle(40%);
+  }
+  70% {
+    clip-path: circle(0%);
   }
   100% {
-    transform: rotateY(-90deg);
+    clip-path: circle(0%);
   }
 }
 .index-header {
@@ -178,6 +181,14 @@ h1:nth-child(4) {
   height: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.page-header {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -229,10 +240,16 @@ h2 {
   background-color: #F2F2F2;
 }
 .explore span .yourPosition {
+  width: 40%;
   background-color: #F2F2F2;
-  font-size: 18px;
   text-align: center;
+  font-size: 14px;
   border: none;
+  outline: none;
+}
+.explore span .yourPosition:focus {
+  transform: scale(1.3);
+  transition: 1s;
 }
 .explore .indication {
   width: 85%;
@@ -250,32 +267,35 @@ h2 {
 .tuto .steep {
   width: 85%;
   height: 50px;
-  min-width: 370px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
   box-shadow: 2px 2px 10px #bfbfbf;
   background-color: #F2F2F2;
-  font-weight: 700;
   position: relative;
+}
+.tuto .steep p {
+  font-size: 14px;
+  width: max-content;
+  margin-left: 20px;
+}
+.tuto .steep .fas {
+  position: absolute;
+  left: 30px;
 }
 .tuto .steep .num {
   width: 25px;
   height: 25px;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  font-size: 18px;
+  align-items: center;
+  font-size: 16px;
   border-radius: 50%;
   background-color: #9356DC;
   color: #FFF;
   position: absolute;
   left: -10px;
-}
-.tuto .steep .fas {
-  position: absolute;
-  left: 40px;
 }
 
 .restaurants {
@@ -331,7 +351,9 @@ h2 {
   background-color: #FFF;
 }
 .cards__describe h3 {
-  margin: 5px 10px;
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 10px;
 }
 .cards__describe p {
   margin: 3px 10px;
@@ -340,14 +362,6 @@ h2 {
   position: absolute;
   right: 15px;
   top: 15px;
-}
-
-.page-header {
-  width: 80%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .resto1 {
