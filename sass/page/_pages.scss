@@ -48,7 +48,6 @@ background-position: center center;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        font-size: 17px;
         &--weight-txt{
             font-weight: 300;
             @include marging(5px, 0);
@@ -109,3 +108,5 @@ background-position: center center;
         transition: 0.7s 0.2s;
     }
 }
+
+

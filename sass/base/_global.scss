@@ -6,15 +6,15 @@
 @font-face {
     font-family: 'shrikhandregular';
     src: url('police/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
-         url('police/Shrikhand/shrikhand-regular-webfont.woff') format('woff');
+    url('police/Shrikhand/shrikhand-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    
 }
 @font-face {
     font-family: 'roboto';
     src: url('police/Roboto/roboto-regular.woff2') format('woff2'),
-         url('police/Roboto/roboto-regular.woff') format('woff');
+    url('police/Roboto/roboto-regular.woff') format('woff');
 }
 
 body{
@@ -23,6 +23,7 @@ body{
     box-sizing: border-box;
     @include size-container(100%, 100vh);
     font-family: "roboto";
+    font-size: 12px;
 }
 
 h1, .name-resto{
