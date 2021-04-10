@@ -25,7 +25,11 @@ body{
     font-family: "roboto";
 }
 
-h1{
+h1, .name-resto{
     font-family: "shrikhandregular";
     @include marging(20px, 0);
+}
+
+h3{
+    margin:0;
 }

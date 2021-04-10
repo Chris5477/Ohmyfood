@@ -1,16 +1,9 @@
-@include menu-resto;
-
 .resto{
-    @include size-container(100%, 300px);
-    background-position: center center;
-    background-size: cover;
-    margin: 0;
+@include menu-resto;
+@include size-container(100%,300px);
+background-size: cover;
+background-position: center center;
 }
-
-.order{
-    @extend %btn-submit;
-}
-
 .menu{
     background-color: $bg-component;
     @include border-round(30px, 30px, 0,0);
@@ -19,48 +12,81 @@
     &__name{
         @include flexing(space-around, center);
         @include size-container(100%, auto);
-    }.form-menu{
-        @include size-container(100%, auto);
-        @include flexing;
-        flex-direction: column;
-        animation: writing-menu 1.5s ease-out forwards;
-        opacity: 0;
-    }.form-menu > h2{
+    }
+}
+
+.form-menu{
+    @include size-container(100%, auto);
+    @include flexing;
+    flex-direction: column;
+    > h2{
         width: 90%;
         font-weight: 100;
-    }
-    &__choix{
-        background-color:$white;
-        @include size-container(90%,80px);
-        @include flexing(flex-start, center);
-        @include shadow(2px, 2px, 15px);
-        @include marging(10px, auto);
-        @extend %border-circle;
-        font-size: 18px;
-        font-weight: bold;
-        position: relative;
-        overflow: hidden;
-        .price{
-            position: absolute;
-            bottom: 15px;
-            right: 15px
-        }
-    }.intitule{
-        padding-left: 10px;
-    }h3{
-        font-size: 19px;
-        font-weight: bold;
-        margin: 0;
-    }p{
-        margin:5px 0;
-        font-weight: 300;
-        font-size: 15px;
     }
 }
 
 .underline{
     border-bottom: 4px solid $color-third;
     padding-bottom: 5px;
+}
+
+.choix{
+    background-color:$white;
+    @include flexing(space-between, center);
+    @include size-container(95%, 80px);
+    @include marging(10px, auto);
+    @include shadow(3px,3px,5px,$color-shadow);
+    @extend %border-circle;
+    font-weight: bold;
+    position: relative;
+    animation: writing-menu 1.5s ease-out forwards;
+    transform-origin: 50% bottom;
+    overflow: hidden;
+    opacity: 0;
+    &__intitule{
+        padding-left: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 17px;
+        &--weight-txt{
+            font-weight: 300;
+            @include marging(5px, 0);
+        }&--ellipse{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+    }
+}
+
+.bill{
+    @include flexing;
+    transform: translateX(100px);
+    &__checkbox{
+        @include size-container(80px,80px);
+        @include flexing;
+        background-color: $color-third;
+        &--checked{
+            @include flexing;
+            @include size-container(40px,40px);
+            background-color: $white;
+            border-radius: 50%;
+            transform: rotateZ(-90deg)
+        }
+    }
+}
+
+.prix{
+    position: relative;
+    right: 40px;
+    top: 15px;
+    
+}
+
+.order{
+    @extend %btn-submit;
 }
 
 @keyframes writing-menu {
@@ -71,38 +97,15 @@
     to{
         transform: scaleY(1);
         opacity: 1;
+    } 
+}
+
+.choix:hover > .bill{
+    transform: translateX(0px);
+    padding-left: 40px;
+    transition: 1s;
+    .bill__checkbox--checked{
+        transform: rotateZ(0deg); 
+        transition: 0.7s 0.2s;
     }
 }
-
-.price{
-    @include flexing;
-    transform: translateX(100px);
-    .prix{
-        place-self: flex-end flex-end;
-        padding-right: 20px;
-    }
-}
-
-.coche{
-    @include size-container(80px,80px);
-    @include flexing;
-    transform: translateY(15px);
-    background-color: $color-third;
-}
-
-.checked{
-    @include size-container(40px,40px);
-    @include flexing;
-    background-color: $white;
-    border-radius: 50%;
-    transform: rotateZ(-90deg);
-}
-
-.menu__choix:active > .price{
-    transform: translateX(15px);
-    transition: 1.5s;
-    @if(true){
-        .checked {transform: rotateZ(0deg); transition: 2.5s}
-    }
-}
-

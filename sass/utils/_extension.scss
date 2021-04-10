@@ -3,9 +3,9 @@
 }
 
 %btn-submit{
-    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    @include degrade-color(170deg, $color-secondary, $color-primary, 1);
     @include size-container(60%, 50px);
-    @include shadow(5px, 5px, 10px, black);
+    @include shadow(5px, 5px, 10px, $color-shadow);
     @include marging(20px,auto);
     color: #FFF;
     font-size: 12px;
@@ -14,4 +14,9 @@
     outline: none;
     cursor: pointer;
     border-radius: 30px;
+    &:hover{
+        @include shadow(5px, 5px, 10px, darken($color: $color-shadow, $amount: 30%));
+        @include degrade-color(170deg, $color-secondary,  $color-primary,0.7);
+        transition: 0.4s ease-out;
+    }
 }

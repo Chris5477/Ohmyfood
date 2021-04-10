@@ -23,6 +23,11 @@
     border-bottom-right-radius: $bottomright;
     border-bottom-left-radius: $bottomleft;
 }
+
+@mixin degrade-color($angle, $firstcolor, $seconde-color,$opacity){
+    background: linear-gradient($angle, $firstcolor, $seconde-color);
+    opacity: $opacity;
+}
     
 
 @mixin shadow($x, $y, $propagation, $shadow-color:$color-shadow){
@@ -39,7 +44,7 @@
 
 @mixin menu-resto{
     @each $key, $value in $restos{
-        .resto#{$key}{
+        &#{$key}{
             background-image: $value;
         }
     }
