@@ -1,16 +1,15 @@
 .footer{
     background-color:$colorfooter;
-    @include size-container(100%, auto);
-    @include flexing(center, flex-start);
+    display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     h1{
     font-size: 18px;
     @include padding(10px, 0, 0, 30px);
     color: $white;
     }
     a{
-        @include padding(0px,0, 5px, 30px);
+        @include padding(5px,0, 5px, 30px);
         color: $white;   
     }
 }

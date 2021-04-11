@@ -8,9 +8,8 @@
   width: 60%;
   height: 50px;
   box-shadow: 5px 5px 10px #bfbfbf;
-  margin: 20px auto;
+  margin: 40px 0;
   color: #FFF;
-  font-size: 12px;
   font-weight: bold;
   border: none;
   outline: none;
@@ -75,8 +74,8 @@ h3 {
 .fa-utensils::before, .fa-hands-helping::before {
   color: white;
   display: inline-flex;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -97,7 +96,7 @@ h3 {
   opacity: 0.2;
 }
 
-.heart-nofill:hover {
+.heart-nofill:active {
   animation: fill 0.6s ease-out forwards;
 }
 
@@ -211,13 +210,9 @@ h1:nth-child(4) {
 
 .footer {
   background-color: #101010;
-  width: 100%;
-  height: auto;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-direction: column;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 .footer h1 {
   font-size: 18px;
@@ -225,12 +220,8 @@ h1:nth-child(4) {
   color: #FFF;
 }
 .footer a {
-  padding: 0px 0 5px 30px;
+  padding: 5px 0 5px 30px;
   color: #FFF;
-}
-
-section {
-  margin-bottom: 50px;
 }
 
 h2 {
@@ -240,7 +231,6 @@ h2 {
 .explore {
   width: 100%;
   height: auto;
-  padding: 0 0 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,6 +261,7 @@ h2 {
 .explore .indication {
   width: 85%;
   margin: auto;
+  padding-top: 40px;
 }
 .explore .indication p {
   font-size: 18px;
@@ -280,6 +271,7 @@ h2 {
 .tuto {
   width: 100%;
   height: auto;
+  margin-top: 30px;
 }
 .tuto .steep {
   width: 85%;
@@ -318,7 +310,7 @@ h2 {
 .restaurants {
   width: 100%;
   height: auto;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 40px 0;
   background-color: #F2F2F2;
 }
 
@@ -408,6 +400,7 @@ h2 {
   border-bottom-left-radius: 0;
   position: relative;
   bottom: 60px;
+  margin-bottom: -60px;
 }
 .menu__name {
   display: flex;
@@ -418,8 +411,6 @@ h2 {
 }
 
 .form-menu {
-  width: 100%;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -438,33 +429,36 @@ h2 {
 .choix {
   background-color: #FFF;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 95%;
   height: 80px;
   margin: 10px auto;
   box-shadow: 3px 3px 5px #bfbfbf;
-  font-weight: bold;
-  position: relative;
   animation: writing-menu 1.5s ease-out forwards;
   transform-origin: 50% bottom;
   overflow: hidden;
   opacity: 0;
 }
 .choix__intitule {
-  padding-left: 20px;
+  width: 100%;
+  padding: 20px 0px 20px 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.choix__intitule--weight-txt {
+.choix__intitule > span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.choix__intitule--name-font {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.choix__intitule--description-font {
   font-weight: 300;
-  margin: 5px 0;
-}
-.choix__intitule--ellipse {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 12px;
 }
 
 .bill {
@@ -508,14 +502,18 @@ h2 {
     opacity: 1;
   }
 }
-.choix:hover > .bill {
+.choix:active > .bill {
   transform: translateX(0px);
   padding-left: 40px;
   transition: 1s;
 }
-.choix:hover > .bill .bill__checkbox--checked {
+.choix:active > .bill .bill__checkbox--checked {
   transform: rotateZ(0deg);
   transition: 0.7s 0.2s;
+}
+
+[type=checkbox] {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */

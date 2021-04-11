@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
-    <title>Ohmyfood</title>
-</head>
-
-<body>
     
-    <header class="page-header">
-        
-        <a href="index.html"><span class="fas fa-arrow-left"></span></a>
-        <h1>Ohmyfood</h1>
-        
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/45e38e596f.js" crossorigin="anonymous"></script>
+        <title>Ohmyfood</title>
+    </head>
     
-    <main class="alacarte">
+    <body>
         
-        <div class="resto resto4"></div>
-        
-        <section class="menu">
+        <header class="page-header">
             
-            <div class="menu__name">
-                
-                <h2 class="name-resto">Le délice des sens</h2>
-                <span class="far fa-heart heart-nofill"></span>
-                
+            <a href="index.html"><span class="fas fa-arrow-left"></span></a>
+            <h1>Ohmyfood</h1>
+            
+        </header>
+        
+        <main class="alacarte">
+            
+            <div class="resto resto4"></div>
+            
+            <section class="menu">
+            
+                <div class="menu__name">
+                    
+                    <h2 class="name-resto">Le délice des sens</h2>
+                    <span class="far fa-heart heart-nofill"></span>
+                    
             </div>
             
             <form class="form-menu" method="POST" action="#">
@@ -38,12 +38,13 @@
                 
                 <div class="choix">
                     
-                    <div class="choix__intitule">
+                    <label class="choix__intitule" for="select">
                         
-                        <h3 class="choix__intitule--ellipse">Tartare de thon</h3>
-                        <p class="choix__intitule--weight-txt choix__intitule--ellipse">Assaisonné au yuzu</p>
+                        <input type="checkbox" id="select" />
+                        <span class="choix__intitule--name-font">Tartare de thon</span>
+                        <span class="choix__intitule__description-font">Assaisonné au yuzu</span>
                         
-                    </div>
+                    </label>
                     
                     <div class="bill">
                         
@@ -62,14 +63,15 @@
                     </div>
                     
                 </div>
-                        <div class="choix">
-                            
-                            <div class="choix__intitule">
+                <div class="choix">
+                    
+                            <label class="choix__intitule" for="select2">
                                 
-                                <h3 class="choix__intitule--ellipse">Bouchée de homard croustillant</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">et sa farandole de petits légumes</p>
-                                
-                            </div>
+                                <input type="checkbox" id="select2" />
+                                <span class="choix__intitule--name-font">Bouchée de homard croustillant</span>
+                                <span class="choix__intitule__description-font">Et sa farandole de petits légumes</span>
+    
+                            </label>
                             
                             <div class="bill">
                                 
@@ -89,13 +91,14 @@
                             
                         </div>
                         <div class="choix">
-                            
-                            <div class="choix__intitule">
+
+                            <label class="choix__intitule" for="select3">
                                 
-                                <h3 class="choix__intitule--ellipse">Velouté de cèpes</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">Aux truffes</p>
+                                <input type="checkbox" id="select3" />
+                                <span class="choix__intitule--name-font">Velouté de cèpes</span>
+                                <span class="choix__intitule__description-font">Aux truffes</span>
                                 
-                            </div>
+                            </label>
                             
                             <div class="bill">
                                 
@@ -117,13 +120,14 @@
                         <h2><span class="underline">PLAT</span>S</h2>
                         
                         <div class="choix">
-                            
-                            <div class="choix__intitule">
+
+                            <label class="choix__intitule" for="select4">
                                 
-                                <h3 class="choix__intitule--ellipse">Poulet rôti aux herbes de provence</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">Et sa crême de truffe</p>
-                                
-                            </div>
+                                <input type="checkbox" id="select4" />
+                                <span class="choix__intitule--name-font">Poulet rôti aux herbes de provence</span>
+                                <span class="choix__intitule__description-font">Et sa crème de truffe</span>
+    
+                            </label>
                             
                             <div class="bill">
                                 
@@ -143,13 +147,14 @@
                             
                         </div>
                         <div class="choix">
-                            
-                            <div class="choix__intitule">
+
+                            <label class="choix__intitule" for="select5">
                                 
-                                <h3 class="choix__intitule--ellipse">Langouste rôties</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">Et ses légumes de saison</p>
+                                <input type="checkbox" id="select5" />
+                                <span class="choix__intitule--name-font">Langouste rôties</span>
+                                <span class="choix__intitule__description-font">Et ses légumes de saison</span>
                                 
-                            </div>
+                            </label>
                             
                             <div class="bill">
                                 
@@ -170,12 +175,13 @@
                         </div>
                         <div class="choix">
                             
-                            <div class="choix__intitule">
+                            <label class="choix__intitule" for="select6">
+
+                                <input type="checkbox" id="select6" />
+                                <span class="choix__intitule--name-font">Côte de boeuf angus</span>
+                                <span class="choix__intitule__description-font">Et sa purée de panais</span>
                                 
-                                <h3 class="choix__intitule--ellipse">Côte de boeuf angus</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">Et sa purée de panais</p>
-                                
-                            </div>
+                            </label>
                             
                             <div class="bill">
                                 
@@ -198,17 +204,18 @@
                         
                         <div class="choix">
                             
-                            <div class="choix__intitule">
+                            <label class="choix__intitule" for="select7">
                                 
-                                <h3 class="choix__intitule--ellipse">Farandole de desserts</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">Du chef</p>
+                                    <input type="checkbox" id="select7" />
+                                    <span class="choix__intitule--name-font">Farandole de desserts</span>
+                                    <span class="choix__intitule__description-font">Du chef</span>
+        
+                                </label>
                                 
-                            </div>
-                            
-                            <div class="bill">
+                                <div class="bill">
                                 
-                                <span class="prix">18€</span>
-                                
+                                    <span class="prix">18€</span>
+                                    
                                 <div class="bill__checkbox">
                                     
                                     <div class="bill__checkbox--checked">
@@ -224,12 +231,13 @@
                         </div>
                         <div class="choix">
                             
-                            <div class="choix__intitule">
+                            <label class="choix__intitule" for="select8">
                                 
-                                <h3 class="choix__intitule--ellipse">Crème brulée</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">Revisitée</p>
+                                <input type="checkbox" id="select8" />
+                                <span class="choix__intitule--name-font">Crème brulée</span>
+                                <span class="choix__intitule__description-font">Revisitée</span>
                                 
-                            </div>
+                            </label>
                             
                             <div class="bill">
                                 
@@ -249,13 +257,14 @@
                             
                         </div>
                         <div class="choix">
-                            
-                            <div class="choix__intitule">
+
+                            <label class="choix__intitule" for="select9">
                                 
-                                <h3 class="choix__intitule--ellipse">Tiramisu</h3>
-                                <p class="choix__intitule--weight-txt choix__intitule--ellipse">A la noisette</p>
-                                
-                            </div>
+                                <input type="checkbox" id="select9" />
+                                <span class="choix__intitule--name-font">Tiramisu</span>
+                                <span class="choix__intitule__description-font">A la noisette</span>
+    
+                            </label>
                             
                             <div class="bill">
                                 
@@ -274,8 +283,8 @@
                             </div>
                             
                         </div>
-                <input class="order" type="submit" value="Commander" />
-    
+                        <input class="order" type="submit" value="Commander" />
+                        
             </form>
             
         </section>
@@ -283,7 +292,7 @@
     </main>
 
     <footer class="footer">
-
+        
         <h1 class="logo">Ohmyfood</h1>
         
         <a href="#"><span class="fas fa-utensils"></span>Proposer un restaurant</a>

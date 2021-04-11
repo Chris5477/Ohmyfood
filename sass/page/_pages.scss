@@ -1,3 +1,4 @@
+
 .resto{
 @include menu-resto;
 @include size-container(100%,300px);
@@ -9,6 +10,7 @@ background-position: center center;
     @include border-round(30px, 30px, 0,0);
     position: relative;
     bottom: 60px;
+    margin-bottom: -60px;
     &__name{
         @include flexing(space-around, center);
         @include size-container(100%, auto);
@@ -16,8 +18,7 @@ background-position: center center;
 }
 
 .form-menu{
-    @include size-container(100%, auto);
-    @include flexing;
+    @include flexing;   
     flex-direction: column;
     > h2{
         width: 90%;
@@ -32,31 +33,37 @@ background-position: center center;
 
 .choix{
     background-color:$white;
-    @include flexing(space-between, center);
+    display: flex;
     @include size-container(95%, 80px);
     @include marging(10px, auto);
     @include shadow(3px,3px,5px,$color-shadow);
     @extend %border-circle;
-    font-weight: bold;
-    position: relative;
     animation: writing-menu 1.5s ease-out forwards;
     transform-origin: 50% bottom;
     overflow: hidden;
     opacity: 0;
     &__intitule{
-        padding-left: 20px;
+        width: 100%;
+        @include padding(20px,0px,20px,20px);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        &--weight-txt{
-            font-weight: 300;
-            @include marging(5px, 0);
-        }&--ellipse{
+        & > span{
+            display: block;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        
+        &--name-font{
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        &--description-font{
+            font-weight: 300;
+            font-size: 12px;
+            
+        }        
     }
 }
 
@@ -99,7 +106,7 @@ background-position: center center;
     } 
 }
 
-.choix:hover > .bill{
+.choix:active > .bill{
     transform: translateX(0px);
     padding-left: 40px;
     transition: 1s;
@@ -110,3 +117,6 @@ background-position: center center;
 }
 
 
+[type="checkbox"]{
+    display: none;
+}

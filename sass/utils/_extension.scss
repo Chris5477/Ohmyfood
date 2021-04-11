@@ -6,9 +6,8 @@
     @include degrade-color(170deg, $color-secondary, $color-primary, 1);
     @include size-container(60%, 50px);
     @include shadow(5px, 5px, 10px, $color-shadow);
-    @include marging(20px,auto);
+    @include marging(40px, 0);
     color: #FFF;
-    font-size: 12px;
     font-weight: bold;
     border: none;
     outline: none;
