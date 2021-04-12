@@ -8,8 +8,12 @@
     transform-origin: 50% bottom;
 }
 
-.logo-mobile::before, .logo-list::before{
+.logo-mobile::before, .logo-list::before, .fa-desktop::before{
     color: grey;
+}
+
+.fa-desktop::before{
+    display: none;
 }
 
 .fa-utensils::before, .fa-hands-helping::before{

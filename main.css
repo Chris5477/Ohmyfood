@@ -1,4 +1,4 @@
-.choix, .cards, .tuto .steep {
+.choix, .restaurants .cards, .tuto .steep {
   border-radius: 20px;
 }
 
@@ -8,13 +8,18 @@
   width: 60%;
   height: 50px;
   box-shadow: 5px 5px 10px #bfbfbf;
-  margin: 40px 0;
+  margin: 25px 0;
   color: #FFF;
   font-weight: bold;
   border: none;
   outline: none;
   cursor: pointer;
   border-radius: 30px;
+}
+@media screen and (min-width: 992px) {
+  .order, .explore .send {
+    width: 250px;
+  }
 }
 .order:hover, .explore .send:hover {
   box-shadow: 5px 5px 10px #737373;
@@ -50,7 +55,6 @@ body {
 
 h1, .name-resto {
   font-family: "shrikhandregular";
-  margin: 20px 0;
 }
 
 h3 {
@@ -67,8 +71,12 @@ h3 {
   transform-origin: 50% bottom;
 }
 
-.logo-mobile::before, .logo-list::before {
+.logo-mobile::before, .logo-list::before, .fa-desktop::before {
   color: grey;
+}
+
+.fa-desktop::before {
+  display: none;
 }
 
 .fa-utensils::before, .fa-hands-helping::before {
@@ -145,7 +153,7 @@ h3 {
   margin: 0;
   font-weight: bolder;
   color: #99E2D0;
-  transform: translateX(400px);
+  transform: translateX(1000px);
   animation: loading 2s ease-in-out 0.3s forwards;
 }
 
@@ -201,11 +209,17 @@ h1:nth-child(4) {
 }
 
 .page-header {
-  width: 80%;
+  width: 100%;
   height: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  position: relative;
+}
+.page-header span {
+  position: absolute;
+  left: 10%;
+  top: 30%;
 }
 
 .footer {
@@ -224,33 +238,20 @@ h1:nth-child(4) {
   color: #FFF;
 }
 
-h2 {
-  margin-left: 20px;
-}
-
 .explore {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #F2F2F2;
   text-align: center;
 }
 .explore span {
-  width: 100%;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 1px 5px #bfbfbf inset;
-  background-color: #F2F2F2;
 }
 .explore span .yourPosition {
-  width: 40%;
   background-color: #F2F2F2;
   text-align: center;
-  font-size: 14px;
   border: none;
   outline: none;
 }
@@ -261,17 +262,17 @@ h2 {
 .explore .indication {
   width: 85%;
   margin: auto;
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .explore .indication p {
   font-size: 18px;
-  font-weight: 300;
   color: grey;
 }
 .tuto {
-  width: 100%;
-  height: auto;
-  margin-top: 30px;
+  margin: 40px 0;
+}
+.tuto--margeLeft {
+  margin-left: 20px;
 }
 .tuto .steep {
   width: 85%;
@@ -286,7 +287,6 @@ h2 {
 }
 .tuto .steep p {
   font-size: 14px;
-  width: max-content;
   margin-left: 20px;
 }
 .tuto .steep .fas {
@@ -308,13 +308,13 @@ h2 {
 }
 
 .restaurants {
-  width: 100%;
-  height: auto;
   padding: 20px 0 40px 0;
   background-color: #F2F2F2;
 }
-
-.cards {
+.restaurants--margeLeft {
+  margin-left: 20px;
+}
+.restaurants .cards {
   width: 90%;
   height: 30%;
   margin: 30px auto;
@@ -322,25 +322,25 @@ h2 {
   position: relative;
   z-index: 1;
 }
-.cards--picture1 {
+.restaurants .cards--picture1 {
   background-image: url(ressources/restaurants/jay-wennington.jpg);
 }
-.cards--picture2 {
+.restaurants .cards--picture2 {
   background-image: url(ressources/restaurants/stil.jpg);
 }
-.cards--picture3 {
+.restaurants .cards--picture3 {
   background-image: url(ressources/restaurants/toa-heftiba.jpg);
 }
-.cards--picture4 {
+.restaurants .cards--picture4 {
   background-image: url(ressources/restaurants/louis-hansel.jpg);
 }
-.cards span {
+.restaurants .cards span {
   position: absolute;
   right: 20px;
   bottom: 15px;
   z-index: 1000;
 }
-.cards__containerImg {
+.restaurants .cards__containerImg {
   width: 100%;
   height: 100px;
   border-top-left-radius: 20px;
@@ -350,7 +350,7 @@ h2 {
   background-position: center center;
   background-size: cover;
 }
-.cards__describe {
+.restaurants .cards__describe {
   width: 100%;
   height: 60px;
   border-top-left-radius: 0;
@@ -359,15 +359,11 @@ h2 {
   border-bottom-left-radius: 20px;
   background-color: #FFF;
 }
-.cards__describe h3 {
+.restaurants .cards__describe--marge-txt {
+  padding: 7px 0 0 15px;
   margin: 0;
-  padding-top: 10px;
-  padding-left: 10px;
 }
-.cards__describe p {
-  margin: 3px 10px;
-}
-.cards__describe .new-resto {
+.restaurants .cards__describe .new-resto {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -406,8 +402,6 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
-  height: auto;
 }
 
 .form-menu {
@@ -514,6 +508,114 @@ h2 {
 
 [type=checkbox] {
   display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .logo-mobile::before {
+    display: none;
+  }
+
+  .fa-desktop::before {
+    display: initial;
+  }
+
+  .tuto {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    position: relative;
+  }
+  .tuto h2 {
+    position: absolute;
+    top: -100px;
+    left: 1%;
+  }
+  .tuto .steep {
+    width: 30%;
+    height: 250px;
+    margin: auto;
+  }
+  .tuto .steep .num {
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .tuto .steep p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+  }
+  .tuto .steep .fas {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .tuto .steep .fas::before {
+    font-size: 30px;
+  }
+
+  .restaurants {
+    width: 90%;
+    height: auto;
+    justify-content: space-around;
+    padding-top: 50px;
+    border-radius: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 320px);
+    grid-gap: 15px;
+    position: relative;
+  }
+  .restaurants > h2 {
+    position: absolute;
+    top: 0;
+    left: 1%;
+  }
+  .restaurants .cards {
+    width: 320px;
+    height: 450px;
+  }
+  .restaurants .cards__containerImg {
+    height: 350px;
+  }
+  .restaurants .cards__describe {
+    height: 100px;
+  }
+  .restaurants .cards__describe--marge-txt {
+    padding-top: 17px;
+  }
+
+  .choix__intitule--name-font {
+    font-size: 19px;
+    margin: 0;
+  }
+
+  .alacarte {
+    background-color: #F2F2F2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 17px;
+  }
+
+  .menu__name {
+    margin-bottom: 20px;
+  }
+
+  .resto {
+    height: 100%;
+    order: 2;
+  }
+
+  .menu {
+    position: initial;
+    order: 1;
+    transform: scale(0.9);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

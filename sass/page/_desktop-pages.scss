@@ -1,0 +1,28 @@
+.choix__intitule--name-font{
+    font-size: 19px;
+    margin: 0;
+}
+
+.alacarte{
+    background-color: $bg-component;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 17px;
+}
+
+.menu__name{
+    margin-bottom: 20px;
+}
+
+.resto{
+    height: 100%;
+    order: 2;
+}
+
+.menu{
+    position: initial;
+    order: 1;
+    transform: scale(0.9);
+    
+}
+

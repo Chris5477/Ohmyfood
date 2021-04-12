@@ -13,7 +13,6 @@ background-position: center center;
     margin-bottom: -60px;
     &__name{
         @include flexing(space-around, center);
-        @include size-container(100%, auto);
     }
 }
 

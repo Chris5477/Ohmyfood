@@ -1,22 +1,13 @@
-h2{
-    margin-left: 20px;
-}
-
 .explore{
-    @include size-container(100%, auto);
-    @include flexing;
     background-color: $bg-component;
     text-align: center;
     span{
-        @include size-container(100%,60px);
+        height:60px;
         @include flexing;
         box-shadow: 0px 1px 5px $color-shadow inset;
-        background-color: $bg-component;
         .yourPosition{
-            width: 40%;
             background-color: $bg-component;
             text-align: center;
-            font-size: 14px;
             border: none;
             outline: none;
             &:focus{
@@ -28,10 +19,9 @@ h2{
      .indication{
         width: 85%;
         margin: auto;
-        padding-top: 40px;
+        padding-top: 30px;
         p{  
             font-size: 18px;
-            font-weight: 300;
             color: grey;
         }
     }
@@ -40,8 +30,10 @@ h2{
     }
 }
 .tuto{
-    @include size-container(100%, auto);
-    margin-top: 30px;
+    margin:40px 0;
+    &--margeLeft{
+        margin-left: 20px;
+    }
     .steep{
         @include size-container(85%, 50px);
         @include flexing;
@@ -52,7 +44,6 @@ h2{
         position: relative;
         p{
             font-size: 14px;
-            width: max-content;
             margin-left: 20px;
         }
         .fas{
@@ -74,10 +65,11 @@ h2{
 }
 
 .restaurants{
-    @include size-container(100%, auto);
     @include padding(20px, 0, 40px, 0);
     background-color: $bg-component;
-}
+    &--margeLeft{
+        margin-left: 20px;
+    }
    .cards{
        @include size-container(90%, 30%);
        @include marging(30px, auto);
@@ -102,19 +94,15 @@ h2{
            @include size-container(100%, 60px);
            @include border-round(0,0,20px,20px);
            background-color:$white;
-
-       & h3{
-           margin: 0;
-           padding-top: 10px;
-           padding-left: 10px;
-       }
-       & p{
-           @include marging(3px, 10px);
-       }
+           &--marge-txt{
+               @include padding(7px, 0, 0, 15px);
+               margin: 0;
+             
+           }
        & .new-resto{
            position: absolute;
            right: 15px;
            top: 15px;
        }
     }
-}
+}}
