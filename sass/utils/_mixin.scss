@@ -1,28 +1,14 @@
-@mixin size-container($width, $height){
-    width: $width;
-    height: $height;
-}
-
 @mixin flexing($axisX: $axePos, $axisY: $axePos){
     display: flex;
     justify-content: $axisX;
     align-items: $axisY;
 }
 
-@mixin padding($top, $right, $bottom, $left){
-    padding: $top $right $bottom $left;
+@mixin size-container($width, $height){
+    width: $width;
+    height: $height;
 }
 
-@mixin marging($axisX, $axisY){
-    margin: $axisX  $axisY;
-}
-
-@mixin border-round($topleft, $topright, $bottomright, $bottomleft){
-    border-top-left-radius: $topleft;
-    border-top-right-radius: $topright;
-    border-bottom-right-radius: $bottomright;
-    border-bottom-left-radius: $bottomleft;
-}
 
 @mixin degrade-color($angle, $firstcolor, $seconde-color,$opacity){
     background: linear-gradient($angle, $firstcolor, $seconde-color);

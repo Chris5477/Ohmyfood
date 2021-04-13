@@ -19,8 +19,7 @@
 .fa-utensils::before, .fa-hands-helping::before{
     color: white;
     display: inline-flex;
-    width: 25px;
-    height: 25px;
+    @include size-container(25px, 25px);
     @include flexing(flex-start,center);
 }
 

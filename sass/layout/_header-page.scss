@@ -1,5 +1,4 @@
 .page-header{
-    @include size-container(100%, auto);
     @include flexing;
     position: relative;
     span{

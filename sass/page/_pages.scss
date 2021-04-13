@@ -1,13 +1,14 @@
 
 .resto{
 @include menu-resto;
-@include size-container(100%,300px);
+height: 300px;
 background-size: cover;
 background-position: center center;
 }
 .menu{
     background-color: $bg-component;
-    @include border-round(30px, 30px, 0,0);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     position: relative;
     bottom: 60px;
     margin-bottom: -60px;
@@ -17,12 +18,17 @@ background-position: center center;
 }
 
 .form-menu{
-    @include flexing;   
+    display: flex;
+    align-items: center; 
     flex-direction: column;
     > h2{
         width: 90%;
         font-weight: 100;
     }
+}
+
+[type="checkbox"]{
+    display: none;
 }
 
 .underline{
@@ -34,7 +40,7 @@ background-position: center center;
     background-color:$white;
     display: flex;
     @include size-container(95%, 80px);
-    @include marging(10px, auto);
+    margin:10px auto;
     @include shadow(3px,3px,5px,$color-shadow);
     @extend %border-circle;
     animation: writing-menu 1.5s ease-out forwards;
@@ -43,10 +49,8 @@ background-position: center center;
     opacity: 0;
     &__intitule{
         width: 100%;
-        @include padding(20px,0px,20px,20px);
+        padding:20px 0px 20px 20px;
         overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         & > span{
             display: block;
             overflow: hidden;
@@ -116,6 +120,3 @@ background-position: center center;
 }
 
 
-[type="checkbox"]{
-    display: none;
-}
