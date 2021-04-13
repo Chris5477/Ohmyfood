@@ -1,5 +1,3 @@
-
-
 .tuto{
     @include size-container(90%,300px);
     display: flex;
@@ -49,14 +47,14 @@
         top:5px;
     }
     .cards{
-        @include size-container(190px, 200px);
+        @include size-container(190px, 250px);
         &__containerImg{
-            height:150px;
+            height:190px;
         }
         &__describe{
-            height: 50px;
+            height: 60px;
             &--marge-txt{
-                padding-top: 17px;
+                padding-top: 9px;
             }
         }
     }

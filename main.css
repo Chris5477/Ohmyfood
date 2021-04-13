@@ -140,7 +140,7 @@ h3 {
   background-color: #9356DC;
   position: fixed;
   z-index: 1000;
-  animation: disapear 1.5s 3s ease-in-out forwards;
+  animation: disapear 2.5s 3s ease-in-out forwards;
 }
 .loading-spinner h1 {
   font-size: 80px;
@@ -148,7 +148,7 @@ h3 {
   margin: 0;
   font-weight: bolder;
   color: #99E2D0;
-  transform: translateX(1000px);
+  transform: translateX(2000px);
   animation: loading 2s ease-in-out 0.3s forwards;
 }
 
@@ -165,9 +165,6 @@ h1:nth-child(4) {
 }
 
 @keyframes loading {
-  0% {
-    transform: translateX(400px);
-  }
   33% {
     transform: translateX(0px);
   }
@@ -189,7 +186,7 @@ h1:nth-child(4) {
     clip-path: circle(30%);
   }
   70% {
-    clip-path: circle(40%);
+    clip-path: circle(35%);
   }
   100% {
     clip-path: circle(0%);
@@ -674,16 +671,16 @@ h1:nth-child(4) {
   }
   .restaurants .cards {
     width: 190px;
-    height: 200px;
+    height: 250px;
   }
   .restaurants .cards__containerImg {
-    height: 150px;
+    height: 190px;
   }
   .restaurants .cards__describe {
-    height: 50px;
+    height: 60px;
   }
   .restaurants .cards__describe--marge-txt {
-    padding-top: 17px;
+    padding-top: 9px;
   }
 
   .footer {
@@ -692,6 +689,19 @@ h1:nth-child(4) {
   }
   .footer a {
     margin: 0 30px;
+  }
+
+  .alacarte {
+    background-color: #F2F2F2;
+    font-size: 16px;
+  }
+
+  .resto {
+    height: 500px;
+  }
+
+  .menu {
+    border-radius: 0px;
   }
 }
 @media screen and (min-width: 1400px) {
