@@ -5,7 +5,7 @@
 .order, .explore .send {
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   opacity: 1;
-  width: 60%;
+  width: 250px;
   height: 50px;
   box-shadow: 5px 5px 10px #bfbfbf;
   margin: 25px 0;
@@ -15,11 +15,6 @@
   outline: none;
   cursor: pointer;
   border-radius: 30px;
-}
-@media screen and (min-width: 992px) {
-  .order, .explore .send {
-    width: 250px;
-  }
 }
 .order:hover, .explore .send:hover {
   box-shadow: 5px 5px 10px #737373;
@@ -241,6 +236,7 @@ h1:nth-child(4) {
 .explore {
   background-color: #F2F2F2;
   text-align: center;
+  padding-bottom: 30px;
 }
 .explore span {
   height: 60px;
@@ -510,7 +506,7 @@ h1:nth-child(4) {
   display: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 992px) {
   .logo-mobile::before {
     display: none;
   }
@@ -521,16 +517,15 @@ h1:nth-child(4) {
 
   .tuto {
     width: 90%;
-    height: auto;
+    height: 400px;
     display: flex;
     flex-wrap: wrap;
-    margin: 100px auto;
+    margin: 50px auto;
     position: relative;
   }
   .tuto h2 {
     position: absolute;
-    top: -100px;
-    left: 1%;
+    top: 0;
   }
   .tuto .steep {
     width: 30%;
@@ -565,23 +560,21 @@ h1:nth-child(4) {
     justify-content: space-around;
     padding-top: 50px;
     border-radius: 20px;
-    margin: auto;
+    margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 320px);
-    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, 300px);
     position: relative;
   }
   .restaurants > h2 {
     position: absolute;
-    top: 0;
-    left: 1%;
+    top: 5px;
   }
   .restaurants .cards {
-    width: 320px;
-    height: 450px;
+    width: 300px;
+    height: 400px;
   }
   .restaurants .cards__containerImg {
-    height: 350px;
+    height: 300px;
   }
   .restaurants .cards__describe {
     height: 100px;
@@ -590,16 +583,24 @@ h1:nth-child(4) {
     padding-top: 17px;
   }
 
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  .footer a {
+    margin: 0 30px;
+  }
+
   .choix__intitule--name-font {
-    font-size: 19px;
-    margin: 0;
+    font-size: 18px;
+    margin: 0 0 5px 0;
   }
 
   .alacarte {
     background-color: #F2F2F2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .menu__name {
@@ -612,9 +613,95 @@ h1:nth-child(4) {
   }
 
   .menu {
-    position: initial;
     order: 1;
     transform: scale(0.9);
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .tuto {
+    width: 90%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    position: relative;
+  }
+  .tuto h2 {
+    position: absolute;
+    top: 0;
+  }
+  .tuto .steep {
+    width: 30%;
+    height: 150px;
+    margin: auto;
+  }
+  .tuto .steep .num {
+    width: 30px;
+    height: 30px;
+    font-weight: bolder;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .tuto .steep p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+  }
+  .tuto .steep .fas {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .tuto .steep .fas::before {
+    font-size: 30px;
+  }
+
+  .restaurants {
+    width: 90%;
+    height: auto;
+    justify-content: space-around;
+    padding-top: 50px;
+    border-radius: 20px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 190px);
+    position: relative;
+  }
+  .restaurants > h2 {
+    position: absolute;
+    top: 5px;
+  }
+  .restaurants .cards {
+    width: 190px;
+    height: 200px;
+  }
+  .restaurants .cards__containerImg {
+    height: 150px;
+  }
+  .restaurants .cards__describe {
+    height: 50px;
+  }
+  .restaurants .cards__describe--marge-txt {
+    padding-top: 17px;
+  }
+
+  .footer {
+    display: block;
+    text-align: center;
+  }
+  .footer a {
+    margin: 0 30px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  html {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+  }
+
+  body {
+    grid-column-start: 2;
   }
 }
 

@@ -1,13 +1,7 @@
-.logo-mobile::before{
-    display: none;
-}
 
-.fa-desktop::before{
-    display: initial;
-}
 
 .tuto{
-    @include size-container(90%,400px);
+    @include size-container(90%,300px);
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
@@ -17,19 +11,18 @@
         top: 0;
     }
     .steep{
-        @include size-container(30%, 250px);
+        @include size-container(30%, 150px);
         margin: auto;
         .num{
-            @include size-container(50px,50px);
+            @include size-container(30px,30px);
             font-weight: bolder;
             top:0;
             left: 50%;
             transform: translate(-50%, -50%);
-            
         }
         p{
             text-align: center;
-            font-size: 20px;
+            font-size: 18px;
             margin: 0;
         }
         .fas{
@@ -47,21 +40,21 @@
     justify-content: space-around;
     padding-top: 50px;
     border-radius: 20px;
-    margin: 50px auto;
+    margin: 30px auto;
     display: grid;
-    grid-template-columns:repeat(auto-fill,300px);
+    grid-template-columns:repeat(auto-fill,190px);
     position: relative;
     > h2{
         position: absolute;
         top:5px;
     }
     .cards{
-        @include size-container(300px, 400px);
+        @include size-container(190px, 200px);
         &__containerImg{
-            height: 300px;
+            height:150px;
         }
         &__describe{
-            height: 100px;
+            height: 50px;
             &--marge-txt{
                 padding-top: 17px;
             }

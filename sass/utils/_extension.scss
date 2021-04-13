@@ -4,7 +4,7 @@
 
 %btn-submit{
     @include degrade-color(170deg, $color-secondary, $color-primary, 1);
-    @include size-container(60%, 50px);
+    @include size-container(250px, 50px);
     @include shadow(5px, 5px, 10px, $color-shadow);
     @include marging(25px, 0);
     color: #FFF;
@@ -13,9 +13,6 @@
     outline: none;
     cursor: pointer;
     border-radius: 30px;
-    @media screen and(min-width:992px){
-        width: 250px;
-    }
     &:hover{
         @include shadow(5px, 5px, 10px, darken($color: $color-shadow, $amount: 30%));
         @include degrade-color(170deg, $color-secondary,  $color-primary,0.7);

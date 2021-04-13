@@ -1,0 +1,11 @@
+@media screen and (min-width:1400px){
+    html{
+        display: grid;
+        grid-template-columns: 10% 1fr 10%; 
+    }
+    
+    body{
+        grid-column-start: 2;
+    }
+
+}

@@ -1,6 +1,7 @@
 .explore{
     background-color: $bg-component;
     text-align: center;
+    padding-bottom: 30px;
     span{
         height:60px;
         @include flexing;
