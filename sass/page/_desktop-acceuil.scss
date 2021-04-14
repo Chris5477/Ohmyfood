@@ -1,31 +1,86 @@
+.loading-spinner{
+    background-color: $color-secondary;
+}
+
 .logo-mobile::before{
     display: none;
 }
 
 .fa-desktop::before{
     display: initial;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
 }
 
-.tuto{
-    @include size-container(90%,400px);
+.logo-gps::before{
+    display: none;
+}
+
+.index-header{
+    background-color: $color-primary;
+    display: block;
+    h1{
+        font-size: 50px;
+        padding: 40px 50px;
+        margin: 0;
+    }
+}
+
+.explore{
+    padding: 0;
+    .input_ville{
+        display: flex;
+        justify-content: space-around;
+        background-color: $color-primary;
+        text-align: left;
+        .input-location{
+            background-color: $color-primary;
+            align-items: flex-end;
+            box-shadow: none;
+            order: 2;
+            .yourPosition{
+                @include size-container(300px, 30px);
+                &:focus{
+                    transform: none;
+                }
+            }
+        }
+    }
+    
+    .indication{
+        width: 40%;
+        margin: 0;
+        padding: 0 0 40px 0px;
+        order: 1;
+    }h2 , p{
+        color: $white;
+        font-size: 16px;
+    }
+    .send{
+        order: 3
+    }
+}
+
+
+    .tuto{
+        @include size-container(90%,200px);
     display: flex;
+    margin: auto;
     flex-wrap: wrap;
-    margin: 50px auto;
     position: relative;
     & h2{
-        position: absolute;
-        top: 0;
+        display: none;
     }
     .steep{
-        @include size-container(30%, 250px);
+        @include size-container(30%, 100px);
         margin: auto;
         .num{
-            @include size-container(50px,50px);
+            @include size-container(30px,30px);
             font-weight: bolder;
             top:0;
             left: 50%;
             transform: translate(-50%, -50%);
-            
         }
         p{
             text-align: center;
@@ -37,7 +92,7 @@
             left: 50%;
             transform: translateX(-50%);
             &::before{
-                font-size: 30px;
+                font-size: 15px;
             }
     }
 }
@@ -45,18 +100,18 @@
 .restaurants{
     @include size-container(90%,auto);
     justify-content: space-around;
-    padding-top: 50px;
+    padding-top: 30px;
     border-radius: 20px;
-    margin: 50px auto;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns:repeat(auto-fill,300px);
+    grid-template-columns:repeat(auto-fill,250px);
     position: relative;
     > h2{
         position: absolute;
         top:5px;
     }
     .cards{
-        @include size-container(300px, 400px);
+        @include size-container(250px, 400px);
         &__containerImg{
             height: 300px;
         }

@@ -1,12 +1,14 @@
+.indication{
+    padding-top:0;
+}
+
 .tuto{
-    @include size-container(90%,300px);
+    @include size-container(90%,180px);
     display: flex;
     flex-wrap: wrap;
-    margin: 50px auto;
-    position: relative;
+    margin: 10px auto;
     & h2{
-        position: absolute;
-        top: 0;
+        display: none;
     }
     .steep{
         @include size-container(30%, 150px);
@@ -38,7 +40,7 @@
     justify-content: space-around;
     padding-top: 50px;
     border-radius: 20px;
-    margin: 30px auto;
+    margin: 10px auto;
     display: grid;
     grid-template-columns:repeat(auto-fill,190px);
     position: relative;

@@ -39,6 +39,11 @@
     opacity: 0.2;
 }
 
+.heart-nofill:hover{
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
 .heart-nofill:active{
     animation: fill 0.6s ease-out forwards;
 }

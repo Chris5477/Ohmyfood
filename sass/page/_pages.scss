@@ -26,7 +26,6 @@ background-position: center center;
         font-weight: 100;
     }
 }
-
 [type="checkbox"]{
     display: none;
 }
@@ -110,13 +109,15 @@ background-position: center center;
 }
 
 .choix:active > .bill{
-    transform: translateX(0px);
-    padding-left: 40px;
-    transition: 1s;
+    animation: valid 2.7s;
     .bill__checkbox--checked{
         transform: rotateZ(0deg); 
-        transition: 0.7s 0.2s;
+        transition: 0.8s 0.4s;
     }
 }
 
-
+@keyframes valid {
+    0%{transform: translateX(100px);}
+    60%{transform: translateX(0px);}
+    100%{transform: translateX(100px);}  
+}

@@ -34,16 +34,21 @@
         
             <form class="input_ville" method="POST" action="#">
                 
-                <span class="fas fa-map-marker-alt logo-gps"><input class="yourPosition" type="text" placeholder="Paris, Belleville" required /></span>
+                <span class="input-location">
+                    <span class="fas fa-map-marker-alt logo-gps"></span>
+                    <label for="localisation">
+                        <input name="localisation" class="yourPosition" type="text" placeholder="Paris, Belleville" required />
+                    </label>
+                </span>
                 
-            <div class="indication">
+                <div class="indication">
 
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            
-            </div>
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+                
+                </div>
 
-            <input class="send" type="submit" value="Explorer nos restaurants" />
+                <input class="send" type="submit" value="Explorer nos restaurants" />
 
             </form>
 

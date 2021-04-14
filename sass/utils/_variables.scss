@@ -2,11 +2,12 @@ $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-third:#99E2D0;
 $bg-component:#F2F2F2;
-$color-shadow: darken($bg-component, $amount: 20%);
 $colorfooter:#101010;
 $white:#FFF;
+$color-shadow: darken($white, $amount: 20%);
 
 $axePos: center;
+$animation:valid;
 
 $restos:(
     1:url(ressources/restaurants/jay-wennington.jpg),

@@ -1,10 +1,4 @@
 
-.choix__intitule--name-font{
-    font-size: 18px;
-    margin:0 0 5px 0;
-    
-}
-
 .alacarte{
     background-color: $bg-component;
     display: grid;
@@ -16,14 +10,29 @@
     margin-bottom: 20px;
 }
 
-.resto{
-    height: 100%;
-    order: 2;
-}
-
-.menu{
-    order: 1;
-    transform: scale(0.9);
+.choix__intitule--name-font{
+    font-size: 18px;
+    margin:0 0 5px 0;
     
 }
 
+.resto{
+    height: 100%;
+    order: 2;
+    transform: scale(0.9);
+    border-radius: 30px;
+}
+
+.menu{
+    
+    order: 1;
+    transform: scale(0.9);    
+}
+
+.choix:hover > .bill{
+    animation: valid 2.7s;
+    .bill__checkbox--checked{
+        transform: rotateZ(0deg); 
+        transition: 0.8s 0.4s;
+    }
+}

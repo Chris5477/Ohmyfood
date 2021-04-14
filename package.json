@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/style.scss:main.css",
-    "prefix": "postcss main.css --use autoprefixer -d main.css/prefixed"
+    "sass":"sass --watch ./sass/style.scss:main.css --style compressed ",
+    "prefix": "postcss main.css --use autoprefixer -d main/prefixed"
   },
+  "browserslist": "last 4 versions",
   "author": "",
   "license": "ISC"
 }
