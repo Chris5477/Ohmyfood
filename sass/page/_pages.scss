@@ -37,15 +37,14 @@ background-position: center center;
 
 .choix{
     background-color:$white;
-    display: flex;
     @include size-container(95%, 80px);
+    display: flex;
     margin:10px auto;
     @include shadow(3px,3px,5px,$color-shadow);
     @extend %border-circle;
     animation: writing-menu 1.5s ease-out forwards;
     transform-origin: 50% bottom;
     overflow: hidden;
-    opacity: 0;
     &__intitule{
         width: 100%;
         padding:20px 0px 20px 20px;
@@ -72,6 +71,7 @@ background-position: center center;
 .bill{
     @include flexing;
     transform: translateX(100px);
+    transition: all 2s ease;
     &__checkbox{
         @include size-container(80px,80px);
         @include flexing;
@@ -81,7 +81,8 @@ background-position: center center;
             @include size-container(40px,40px);
             background-color: $white;
             border-radius: 50%;
-            transform: rotateZ(-90deg)
+            transform: rotateZ(-90deg);
+            transition: 1.6s;
         }
     }
 }
@@ -108,16 +109,12 @@ background-position: center center;
     } 
 }
 
-.choix:active > .bill{
-    animation: valid 2.7s;
+.choix:hover > .bill{
+    transform: translateX(0px);
+    padding-left: 40px;
     .bill__checkbox--checked{
-        transform: rotateZ(0deg); 
-        transition: 0.8s 0.4s;
+    transform: rotateZ(0deg); 
     }
-}
-
-@keyframes valid {
-    0%{transform: translateX(100px);}
-    60%{transform: translateX(0px);}
-    100%{transform: translateX(100px);}  
-}
+    }
+    
+  

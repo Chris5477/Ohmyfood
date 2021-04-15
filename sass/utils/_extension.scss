@@ -4,7 +4,7 @@
 
 %btn-submit{
     background: linear-gradient(170deg, $color-secondary, $color-primary);
-    @include size-container(250px, 50px);
+    @include size-container(200px, 50px);
     @include shadow(3px, 3px, 10px, $color-shadow);
     margin:25px 0;
     color: #FFF;
@@ -15,7 +15,6 @@
     border-radius: 30px;
     @media screen and (min-width: 992px){
         margin:20px 20px;
-        width: 200px;
     }
     &:hover{
         opacity: 0.9;

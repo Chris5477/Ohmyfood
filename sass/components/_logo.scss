@@ -44,7 +44,7 @@
     transition: 0.3s;
 }
 
-.heart-nofill:active{
+.heart-nofill:visited ,.heart-nofill:hover{
     animation: fill 0.6s ease-out forwards;
 }
 

@@ -24,15 +24,6 @@
 }
 
 .menu{
-    
     order: 1;
     transform: scale(0.9);    
-}
-
-.choix:hover > .bill{
-    animation: valid 2.7s;
-    .bill__checkbox--checked{
-        transform: rotateZ(0deg); 
-        transition: 0.8s 0.4s;
-    }
 }

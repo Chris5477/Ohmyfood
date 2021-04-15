@@ -4,10 +4,6 @@
     flex-direction: column;
     transform-origin: left 50%;
     background-color: $color-primary;
-    position: fixed;
-    z-index: 1000;
-    animation: disapear 2.5s 3s ease-in-out forwards;
-
     h1{
         font-size: 80px;
         text-shadow: 5px 10px 15px $color-secondary;
@@ -31,6 +27,33 @@ h1:nth-child(4){
     animation-delay: 1.5s;
 }
 
+
+.loader{
+    @include size-container(100%,100vh);
+    @include flexing;
+    background-color: $color-primary;
+    position: fixed;
+    z-index: 1000;
+    animation: disapear 2s 0.5s forwards;
+    .cercle{
+        @include size-container(200px, 200px);
+        position: absolute;
+        animation: chargement 0.8s linear infinite;
+        border-top:5px solid $color-secondary;
+        border-bottom:5px solid $color-third;
+        border-radius: 100%;
+    }
+    
+    @keyframes chargement{
+        from{
+            transform: rotateZ(0deg);
+        }
+        to{
+            transform: rotateZ(360deg);
+        }
+    }
+
+}
 
 @keyframes loading {
     33%{transform: translateX(0px);}
