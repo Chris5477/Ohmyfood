@@ -1,6 +1,7 @@
 .loading-spinner{
     @include size-container(100%,100vh);
     @include flexing;
+    position: fixed;
     flex-direction: column;
     transform-origin: left 50%;
     background-color: $color-primary;

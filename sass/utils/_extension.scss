@@ -25,5 +25,5 @@
             @include shadow(5px, 5px, 10px, darken($color: $color-shadow, $amount: 70%));
             transition: 0.3s;
         }
-    }
+    } 
 }

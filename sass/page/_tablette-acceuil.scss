@@ -32,9 +32,10 @@
             &::before{
                 font-size: 30px;
             }
+        }
     }
 }
-}
+
 .restaurants{
     @include size-container(90%,auto);
     justify-content: space-around;
@@ -59,15 +60,5 @@
                 padding-top: 9px;
             }
         }
-    }
-
-}
-
-.footer{
-    display: block;
-  text-align: center;
-  padding-top: 5px;
-  a{
-      margin: 0 30px;
-  }
+    }   
 }

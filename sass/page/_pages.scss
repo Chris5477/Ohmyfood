@@ -1,10 +1,10 @@
-
 .resto{
-@include menu-resto;
-height: 300px;
-background-size: cover;
-background-position: center center;
+    @include menu-resto;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
 }
+
 .menu{
     background-color: $bg-component;
     border-top-left-radius: 30px;
@@ -26,6 +26,7 @@ background-position: center center;
         font-weight: 100;
     }
 }
+
 [type="checkbox"]{
     display: none;
 }
@@ -43,9 +44,9 @@ background-position: center center;
     @include shadow(3px,3px,5px,$color-shadow);
     @extend %border-circle;
     animation: writing-menu 1.5s ease-out forwards;
-    transform-origin: 50% bottom;
     overflow: hidden;
     &__intitule{
+        cursor: pointer;
         width: 100%;
         padding:20px 0px 20px 20px;
         overflow: hidden;
@@ -67,11 +68,12 @@ background-position: center center;
         }        
     }
 }
-
+    
 .bill{
     @include flexing;
     transform: translateX(100px);
     transition: all 2s ease;
+    cursor: pointer;
     &__checkbox{
         @include size-container(80px,80px);
         @include flexing;
@@ -82,7 +84,7 @@ background-position: center center;
             background-color: $white;
             border-radius: 50%;
             transform: rotateZ(-90deg);
-            transition: 1.6s;
+            transition: 1.7s;
         }
     }
 }
@@ -100,21 +102,20 @@ background-position: center center;
 
 @keyframes writing-menu {
     from{
-        transform: scaleY(0);
+        transform: translateY(20px);
         opacity: 0;
     }
     to{
-        transform: scaleY(1);
+        transform: translateY(0);
         opacity: 1;
     } 
 }
 
-.choix:hover > .bill{
+input[type=checkbox]:checked + .bill{
     transform: translateX(0px);
     padding-left: 40px;
     .bill__checkbox--checked{
-    transform: rotateZ(0deg); 
+        transform: rotateZ(0deg); 
     }
-    }
-    
-  
+} 
+

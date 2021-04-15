@@ -28,7 +28,6 @@
     color: $color-third;
 }
 
-
 .heart-nofill::before{
     font-size: 30px;
     cursor: pointer;
@@ -40,11 +39,6 @@
 }
 
 .heart-nofill:hover{
-    opacity: 0.5;
-    transition: 0.3s;
-}
-
-.heart-nofill:visited ,.heart-nofill:hover{
     animation: fill 0.6s ease-out forwards;
 }
 
