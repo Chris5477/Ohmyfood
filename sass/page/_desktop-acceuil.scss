@@ -2,6 +2,13 @@
     background-color: $color-secondary;
 }
 
+.loader{
+    background-color: $color-secondary;
+    .cercle{
+        border-top:5px solid $color-primary;
+    }
+}
+
 .logo-mobile::before{
     display: none;
 }
