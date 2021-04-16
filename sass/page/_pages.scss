@@ -46,7 +46,6 @@
     animation: writing-menu 1.5s ease-out forwards;
     overflow: hidden;
     &__intitule{
-        cursor: pointer;
         width: 100%;
         padding:20px 0px 20px 20px;
         overflow: hidden;
@@ -72,8 +71,7 @@
 .bill{
     @include flexing;
     transform: translateX(100px);
-    transition: all 1s ease;
-    cursor: pointer;
+    transition: all 0.8s ease;
     &__checkbox{
         @include size-container(80px,80px);
         @include flexing;
@@ -111,9 +109,12 @@
     } 
 }
 
-.choix:hover > .bill{
+.choix:active > .bill{
     transform: translateX(0px);
     padding-left: 40px;
+    .bill__checkbox--checked{
+        transform: rotateZ(0deg); 
+    }
 }
 
 input[type=checkbox]:checked + .bill{

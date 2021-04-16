@@ -9,10 +9,21 @@
     margin-bottom: 20px;
 }
 
-.choix__intitule--name-font{
-    font-size: 18px;
-    margin:0 0 5px 0;
+.choix__intitule{
+    cursor: pointer;
+    &--name-font{
+        font-size: 18px;
+        margin:0 0 5px 0;
+        
+    }
+}
     
+ .choix:active > .bill{
+    transform: translateX(0px);
+    padding-left: 40px;
+    .bill__checkbox--checked{
+        transform: rotateZ(0deg); 
+    }
 }
 
 .resto{
