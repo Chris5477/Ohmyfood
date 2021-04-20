@@ -1,5 +1,5 @@
 .resto{
-    @include menu-resto;
+    @include menu-resto;                    
     height: 300px;
     background-size: cover;
     background-position: center center;
@@ -81,8 +81,8 @@
             @include size-container(40px,40px);
             background-color: $white;
             border-radius: 50%;
-            transform: rotateZ(-90deg);
-            transition: 1s;
+            transform: rotateZ(-360deg);
+            transition: 0.4s 0.2s;
         }
     }
 }
