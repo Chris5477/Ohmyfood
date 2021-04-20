@@ -6,7 +6,7 @@
         height:60px;
         @include flexing;
         box-shadow: 0px 1px 5px $color-shadow inset;
-        &:active > .logo-gps::before{
+        &:hover > .logo-gps::before{
             opacity: 0;
             transition: 0.3s;
         }

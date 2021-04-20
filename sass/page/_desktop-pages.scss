@@ -18,7 +18,7 @@
     }
 }
     
- .choix:active > .bill{
+ .choix:hover > .bill{
     transform: translateX(0px);
     padding-left: 40px;
     .bill__checkbox--checked{
