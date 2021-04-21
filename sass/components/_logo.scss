@@ -39,14 +39,11 @@
 }
 
 .heart-nofill:hover{
-    animation: fill 0.6s ease-out forwards;
+    animation: fillheart 0.4s ease-out forwards;
 }
 
-@keyframes fill{
-    0%{
-        transform: scale(0);
-        opacity: 0;
-    }
+@keyframes fillheart{
+ 
     
     80%{
         transform: scale(1.5);
